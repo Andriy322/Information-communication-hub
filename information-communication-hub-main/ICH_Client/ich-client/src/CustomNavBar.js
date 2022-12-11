@@ -106,13 +106,13 @@ export class CustomNavBar extends Component {
             <div >
                 <BrowserRouter>
                     <div className="App container">
-                        <nav className='navbar navbar-expand-sm App-navbar navbar-dark'>
+                        <nav className='navbar navbar-expand-sm  our-navigationbar'>
                             <div className='navbar-brand align-items-center m-1'>
-                                <NavLink className="text-primary" to="/">
-                                    <h4 className="font-weight-bold">ICH</h4>
+                                <NavLink className="text-dark" to="/">
+                                    <h4 className="font-weight-bold">eSupport</h4>
                                 </NavLink>
                             </div>
-                            <MenuLinks
+                            <MenuLinks 
                                 isLogined={this.state.isLogined}
                                 hasLegal={this.state.hasLegal}
                                 userLogin={this.userLogin}
@@ -155,39 +155,37 @@ export class CustomNavBar extends Component {
 function MenuLinks(props) {
     if (!props.isLogined) {
         return (
-            <ul className='navbar-nav align-items-center justify-content-end ml-auto'>
+            <ul className='navbar-nav align-items-center justify-content-end ml-auto '>
                 <li className='nav-item m-1'>
-                    <NavLink className="text-primary" to="/signup">
+                    <NavLink className="text-dark" to="/signup">
                         Sign up |
                     </NavLink>
                 </li>
                 <li className='nav-item m-1'>
-                    <NavLink className="text-primary" to="/signin">
+                    <NavLink className="text-dark" to="/signin">
                         Sign in 
                     </NavLink>
                 </li>
 
-                <li className="nav-item m-1">
-                    <img className="form-control-lg " src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar"></img>
-                </li>
+                
             </ul>
         )
     } else if (props.isLogined && !props.hasLegal) {
         return (
             <ul className='navbar-nav align-items-center justify-content-end ml-auto'>
                 <li className='nav-item m-1'>
-                    <NavLink className="text-primary" to="/signin">
+                    <NavLink className="text-dark" to="/signin">
                         Sign out |
                     </NavLink>
                 </li>
                 <li className='nav-item m-1'>
-                    <NavLink className="text-primary" to="/account">
+                    <NavLink className="text-dark" to="/account">
                         Account
                     </NavLink>
                 </li>
                 <li className="nav-item m-1">
                     <NavLink to="/account">
-                        <img className="form-control-lg " src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar"></img>
+                        <img className="form-control-lg " src="person_2.png" alt="avatar"></img>
                     </NavLink>
                 </li>
             </ul>
@@ -196,23 +194,23 @@ function MenuLinks(props) {
         return(
         <ul className='navbar-nav align-items-center justify-content-end ml-auto'>
             <li className='nav-item m-1'>
-                <NavLink className="text-primary" to="/signin">
+                <NavLink className="text-dark" to="/signin">
                     Sign out |
                 </NavLink>
             </li>
             <li className='nav-item m-1'>
-                <NavLink className="text-primary" to="/legal">
+                <NavLink className="text-dark" to="/legal">
                     Legal Assistance |
                 </NavLink>
             </li>
             <li className='nav-item m-1'>
-                <NavLink className="text-primary" to="/account">
+                <NavLink className="text-dark" to="/account">
                     Account
                 </NavLink>
             </li>
             <li className="nav-item m-1">
                 <NavLink to="/account">
-                    <img className="form-control-lg " src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="avatar"></img>
+                    <img className="form-control-lg " src="person_2.png" alt="avatar"></img>
                 </NavLink>
             </li>
         </ul>)

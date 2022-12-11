@@ -47,7 +47,7 @@ export class Login extends Component{
         return(
             <div className="container"> 
                 <h6 className="text-left">Home/Login</h6>
-                <div className="container rounded border border-primary App-form ">
+                <div className="container rounded  App-form ">
                     <LoginLayout onSubmitButton={this.onSubmitButton}/>
                 </div>  
             </div>

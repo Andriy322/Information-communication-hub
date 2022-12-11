@@ -81,10 +81,7 @@ class RegistrationForm extends Component {
                         <div className="col-6">
                             <div className="row">
                                 <div className="col-1"></div>
-                                <div className="numberCircle col-1">
-                                    <span className="largeNumerCircle">1</span>
-                                    <small>/4</small>
-                                </div>
+                                
                                 <label className="col-10" htmlFor="userInitials">Enter your name and surname</label>
                             </div>
                         </div>
@@ -98,15 +95,12 @@ class RegistrationForm extends Component {
                         <div className="col-6">
                             <div className="row">
                                 <div className="col-1"></div>
-                                <div className="numberCircle col-1">
-                                    <span className="largeNumerCircle">2</span>
-                                    <small>/4</small>
-                                </div>
+                                
                                 <label className="col-10" htmlFor="city">Enter the city you are currently in</label>
                             </div>
                         </div>
                         <div>
-                            <input type="text" className="form-control App-input" id="city" placeholder="Type your city or choose"
+                            <input type="text" className="form-control App-input" id="city" placeholder="Type your city"
                                 onChange={evt => { this.city = evt.target.value}} />
                         </div>
                     </div>
@@ -115,33 +109,30 @@ class RegistrationForm extends Component {
                         <div className="col-6">
                             <div className="row">
                                 <div className="col-1"></div>
-                                <div className="numberCircle col-1">
-                                    <span className="largeNumerCircle">3</span>
-                                    <small>/4</small>
-                                </div>
+                                
                                 <label className="col-10" htmlFor="password">Enter your password</label>
                             </div>
                         </div>
                         <div>
-                            <input type="password" className="form-control App-input" id="password" placeholder="#########"
+                            <input type="password" className="form-control App-input" id="password" placeholder="Password"
                                 onChange={evt => { this.password = evt.target.value}} />
                         </div>
                     </div>
                     <hr className="App-hr" />
                     <div className="row d-flex justify-content-center">
                         <div className="col-3">
-                            <button className="btn btn-light rounded border-primary App-button"
+                            <button className="btn btn-dark text-light rounded border-light App-button our-button"
                                 onClick={(e)=>{
                                     e.preventDefault();
                                    
                                     window.location.href= "http://localhost:3000/"
                                 }}>
-                            <i className="arrow left arrow-blue"></i> Go Back 
+                             Back 
                             </button>
                         </div>
                         <div className="col-3">
-                            <button className="btn btn-primary rounded border-light App-button" onClick={this.OnContinueClick}>
-                                Continue <i className="arrow right arrow-white"></i>
+                            <button className="btn btn-dark rounded border-light App-button our-button" onClick={this.OnContinueClick}>
+                                Continue 
                             </button>
                         </div>
                     </div>
@@ -157,10 +148,7 @@ class RegistrationForm extends Component {
                         <div className="col-6">
                             <div className="row">
                                 <div className="col-1"></div>
-                                <div className="numberCircle col-1">
-                                    <span className="largeNumerCircle">4</span>
-                                    <small>/4</small>
-                                </div>
+                                
                                 <div className="col-10">
                                     <label  >Select the types of assistance you need:</label>
                                     <div className="row p-2">
@@ -204,13 +192,13 @@ class RegistrationForm extends Component {
                     <hr className="App-hr" />
                     <div className="row d-flex justify-content-center">
                         <div className="col-3">
-                            <button className="btn btn-light rounded border-primary App-button">
-                            <i className="arrow left arrow-blue"></i> Go Back 
+                            <button className="btn btn-dark text-light rounded border-light App-button our-button">
+                            Back 
                             </button>
                         </div>
                         <div className="col-3">
-                            <button className="btn btn-primary rounded border-light App-button" onClick={this.OnContinueClick}>
-                                Continue <i className="arrow right arrow-white"></i>
+                            <button className="btn btn-dark text-light rounded border-light App-button our-button" onClick={this.OnContinueClick}>
+                            Continue
                             </button>
                         </div>
                     </div>

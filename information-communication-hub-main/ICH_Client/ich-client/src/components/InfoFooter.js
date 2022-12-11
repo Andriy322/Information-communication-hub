@@ -10,21 +10,21 @@ export class InfoFooter extends Component {
                         <div className="row">
 
                             <div className="col-6 col-lg-2 offset-lg-1 mb-3">
-                                <h5><a href="#">Learn more</a></h5>
+                                <h5><a href="#" className="text-dark">Learn more</a></h5>
                                 <ul className="list-unstyled">
                                     <li className="mb-2"><a href="#" className="text-dark">Our Hub</a></li>
                                     <li className="mb-2"><a href="#" className="text-dark">Q&A Community</a></li>
                                 </ul>
                             </div>
                             <div className="col-6 col-lg-2 mb-3">
-                                <h5><a href="#">About</a></h5>
+                                <h5><a href="#" className="text-dark">About</a></h5>
                                 <ul className="list-unstyled">
                                     <li className="mb-2"><a href="#" className="text-dark">About Us</a></li>
                                     <li className="mb-2"><a href="#" className="text-dark">Contact Us</a></li>
                                 </ul>
                             </div>
                             <div className="col-6 col-lg-2 mb-3">
-                                <h5><a href="#">Policies</a></h5>
+                                <h5><a href="#" className="text-dark" >Policies</a></h5>
                                 <ul className="list-unstyled">
                                     <li className="mb-2"><a href="#" className="text-dark">Privacy Statements</a></li>
                                     <li className="mb-2"><a href="#" className="text-dark">Cookie Policy</a></li>
@@ -32,7 +32,7 @@ export class InfoFooter extends Component {
                                 </ul>
                             </div>
                             <div className="col-6 col-lg-2 mb-3">
-                                <h5><a href="#">Need Help?</a></h5>
+                                <h5><a href="#" className="text-dark">Need Help?</a></h5>
                                 <ul className="list-unstyled">
                                     <li className="mb-2"><a href="#" className="text-dark">Help Center</a></li>
                                 </ul>

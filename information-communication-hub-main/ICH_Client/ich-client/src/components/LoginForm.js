@@ -47,7 +47,7 @@ class LoginForm extends Component {
                         <br/>
                         <div className="form-group">
                             <label className="col-10 " htmlFor="password" >Enter your password</label>
-                            <input type="password" className="form-control" id="password" placeholder="########" 
+                            <input type="password" className="form-control" id="password" placeholder="Password" 
                                 onChange={evt => this.updatePassword(evt)} />
                         </div>
                         <br />
@@ -56,17 +56,17 @@ class LoginForm extends Component {
                     <hr className="App-hr" />
                     <div className="row d-flex justify-content-center">
                         <div className="col-3">
-                            <button className="btn btn-light rounded border-primary App-button" 
+                            <button className="btn btn-dark rounded border-light App-button our-button" 
                                 onClick={(e)=>{
                                     e.preventDefault();
                                    
                                     this.props.onRouteChange("/")
                                 }}>
-                                <i className="arrow left arrow-blue"></i> Go Back
+                            Back
                             </button>
                         </div>
                         <div className="col-3">
-                            <button className="btn btn-primary rounded border-light App-button" 
+                            <button className="btn btn-dark rounded border-light App-button our-button" 
                                 onClick={ async (e)=> {
                                     e.preventDefault();
 
@@ -82,7 +82,7 @@ class LoginForm extends Component {
                                     if (ok) this.props.onRouteChange("/")
 
                                 }} >
-                                Continue <i className="arrow right arrow-white"></i>
+                                Continue
                             </button>
                         </div>
                     </div>

@@ -1,0 +1,143 @@
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Start the app
+Ensure you have node.js, npm, nvm (in case of some unsupported packages use nvm to downgrade Node version) 
+
+My versions: NodeJs:v18.12.1, npm:8.19.3
+
+In the project directory run this command to install all needed packages in package.json:
+
+### `npm install`
+
+Then you can start the app:
+
+### `npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+
+## API for back-end implementation
+
+POST
+/api/Refugees/Login
+1. Request for auth: {
+  "userInit": "Nastya Nosulich",
+  "password": "winter"
+}
+{
+  "userToken": "4pXwlkA4E2j/RA2UZ9IAHyy9T/Sab9zJ+uIf+8lGKl4=",
+  "isAdmin": false,
+  "userInit": "Nastya Nosulich",
+  "userId": 8
+}
+on error - error code = 400 and there will be message
+
+
+GET
+/api/Refugees/ServiceOn/{userId}/{assistanceType}/{token}
+2. https://localhost:5001/api/Refugees/ServiceOn/8/social/4pXwlkA4E2j%2FRA2UZ9IAHyy9T%2FSab9zJ%2BuIf%2B8lGKl4%3D
+Response:{
+  "on": false,
+  "type": "social",
+  "userId": 8
+}
+
+POST
+/api/Refugees/PostRefugee
+3. Registration request {
+  "nameSurname": "Nastya Nosulich",
+  "password": "winter",
+  "city": "Lviv"
+}
+
+Response: {
+  "id": 8,
+  "userType": 3,
+  "nameSurname": "Nastya Nosulich",
+  "password": "winter",
+  "city": "Lviv",
+  "userToken": null,
+  "userTypeNavigation": null,
+  "requests": []
+}
+
+PUT
+/api/Refugees/ChangeAssistance
+4. Change assistance request: {
+    assistanse: {
+        legal: true,
+        social: false,
+        medical: true,
+        employment: false
+    }
+    userId: 8
+}
+
+Response {
+  "userToken": "4pXwlkA4E2j/RA2UZ9IAHyy9T/Sab9zJ+uIf+8lGKl4=",
+  "userId": 8
+}
+
+
+GET
+/api/Refugees/GetRefugees
+5. 
+[
+  {
+    "id": 8,
+    "userType": 3,
+    "nameSurname": "Nastya Nosulich",
+    "password": "winter",
+    "city": "Lviv",
+    "userToken": "4pXwlkA4E2j/RA2UZ9IAHyy9T/Sab9zJ+uIf+8lGKl4=",
+    "userTypeNavigation": {
+      "id": 3,
+      "userType1": "Refugee",
+      "adminUsers": [],
+      "refugees": [
+        {
+          "id": 9,
+          "userType": 3,
+          "nameSurname": "Olena Huchko",
+          "password": "coca-cola",
+          "city": "Lviv",
+          "userToken": "4pXwlkA4E2j/RA2UZ9IAH/ylfM7/0B0XuKZtGqb6JDGw+IMduY5eIozB19NJ1HkK",
+          "requests": []
+        }
+      ]
+    },
+    "requests": []
+  },
+  {
+    "id": 9,
+    "userType": 3,
+    "nameSurname": "Olena Huchko",
+    "password": "coca-cola",
+    "city": "Lviv",
+    "userToken": "4pXwlkA4E2j/RA2UZ9IAH/ylfM7/0B0XuKZtGqb6JDGw+IMduY5eIozB19NJ1HkK",
+    "userTypeNavigation": {
+      "id": 3,
+      "userType1": "Refugee",
+      "adminUsers": [],
+      "refugees": [
+        {
+          "id": 8,
+          "userType": 3,
+          "nameSurname": "Nastya Nosulich",
+          "password": "winter",
+          "city": "Lviv",
+          "userToken": "4pXwlkA4E2j/RA2UZ9IAHyy9T/Sab9zJ+uIf+8lGKl4=",
+          "requests": []
+        }
+      ]
+    },
+    "requests": []
+  }
+]
+
+
+
+
+

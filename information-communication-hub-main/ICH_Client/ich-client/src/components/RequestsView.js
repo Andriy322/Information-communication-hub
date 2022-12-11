@@ -24,11 +24,11 @@ export class RequestsView extends Component {
 
 function SearchField(props) {
     return (
-        <div className="input-group row">
-            <div className="form-outline col-10">
+        <div className=" row">
+            <div className="form col-10">
                 <input type="search" id="form1" className="form-control" placeholder="Name Surname" />
             </div>
-            <button type="button" className="btn btn-light btn-outline-primary App-search-btn col-2">
+            <button type="button" className="btn btn-secondary  App-search-btn col-2">
                 Search
             </button>
         </div>
@@ -94,18 +94,18 @@ function TableRow(props) {
 function SelectedOption(props){
     if (props.value ){
         return (
-            <img className="App-option-img" src="https://cdn-icons-png.flaticon.com/512/748/748113.png" alt="Selected"/>
+            <img className="App-option-img" src="https://www.freeiconspng.com/thumbs/ok-icon/check-yes-ok-icon-10.png" alt="Selected"/>
         )
     } else {
         return (
-            <img className="App-option-img" src="https://cdn-icons-png.flaticon.com/512/2801/2801932.png" alt="Not selected"/>
+            <img className="App-option-img" src="https://w7.pngwing.com/pngs/269/127/png-transparent-computer-icons-ok-miscellaneous-trademark-cross.png" alt="Not selected"/>
         )
     }
 }
 
 function UpdateButton(props) {
     return (
-        <button className="btn btn-info" onClick={()=> props.onUpdateRequestSelected(props.request)}>
+        <button className="btn btn-dark rounded border-light App-button our-button" onClick={()=> props.onUpdateRequestSelected(props.request)}>
             Update Info
         </button>
     )

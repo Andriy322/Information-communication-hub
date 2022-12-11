@@ -44,10 +44,11 @@ export class Signup extends Component{
                 alert("Failed to set assistance")
                 return false
             }
-            else if (responce.status !== undefined){
+            /*else if (responce.status !== undefined){
                 alert("Server error")
                 return false
-            } else{
+            } */
+            else{
                 this.props.assistanceUpdated(responce)
                 return true
             }
@@ -62,7 +63,7 @@ export class Signup extends Component{
         return(
             <div className="container"> 
             <h6 className="text-left">Home - Register</h6>
-            <div className="container rounded border border-primary App-form">
+            <div className="container rounded  App-form">
                 <RegistrationLayout 
                     onSubmitButton={this.onSubmitButton}/>
             </div>

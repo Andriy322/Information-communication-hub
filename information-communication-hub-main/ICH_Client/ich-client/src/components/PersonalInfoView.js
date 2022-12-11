@@ -7,7 +7,7 @@ export class PersonalInfoView extends Component {
         return (
             <div className="container">
                 <div>
-                    <img className="App-avatar" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User Avatar" />
+                    <img className="App-avatar" src="person_2.png" alt="User Avatar" />
                 </div>
                 <div>
                     <NameSurname 
@@ -49,7 +49,7 @@ function FirstButton(props) {
         <div className="p-1">
             <button className="btn btn-light rounded  App-button"
                 disabled={ props.selectedOption !== 1 }>
-                {text} <i className="arrow right arrow-blue"></i>
+                {text} 
             </button>
         </div>
     )
@@ -62,7 +62,7 @@ function SecondButton(props) {
         <div className="p-1">
             <button className="btn btn-light rounded  App-button"
                 disabled={ props.selectedOption !== 2 }>
-                {text} <i className="arrow right arrow-blue"></i>
+                {text} 
             </button>
         </div>
     )

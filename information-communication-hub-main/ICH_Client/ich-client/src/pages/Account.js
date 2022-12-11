@@ -75,10 +75,11 @@ export class Account extends Component {
             alert("Failed to change assistance")
             return false
         }
-        else if (responce.status !== undefined) {
-            alert("Failed to change assistance. Server error")
-            return false
-        } else {
+        //else if (responce.status !== undefined) {
+            //alert("Failed to change assistance. Server error")
+          //  return false
+      //  } 
+        else {
             alert("Types of assistance were successfully changed")
             if (this.props.isAdmin) {
                 this.setState({
@@ -112,8 +113,8 @@ export class Account extends Component {
     render() {
         return (
             <div className="container">
-                <h6 className="text-left">Home - My Account - Update </h6>
-                <div className="container rounded border border-primary App-form ">
+                <h6 className="text-left home-Title">Home - My Account </h6>
+                <div className="container rounded App-form ">
                     <div className="row">
                         <div className="col-3 pt-3 pb-3">
                             <PersonalInfoView

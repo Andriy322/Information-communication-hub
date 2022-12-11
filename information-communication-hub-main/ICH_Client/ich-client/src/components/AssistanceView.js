@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { useNavigate } from "react-router-dom";
 import "../App.css"
 
 export class AssistanceView extends Component {
@@ -22,6 +23,9 @@ export class AssistanceView extends Component {
         })
     }
 
+
+    
+
     render() {
         return (
             <div>
@@ -40,13 +44,17 @@ export class AssistanceView extends Component {
                     <hr className="App-hr" />
                     <div className="row d-flex justify-content-center">
                         <div className="col-4">
-                            <button className="btn btn-light rounded border-primary App-button" 
-                                onClick={this.props.onBackSelected}>
+                            <button className="btn btn-dark rounded border-light App-button our-button" 
+                               
+                                     onClick={()=> {
+                                     let path = '/'; 
+                                    useNavigate(path) 
+                                }}>
                                 Back
                             </button>
                         </div>
                         <div className="col-4">
-                            <button className="btn btn-primary rounded border-light App-button" 
+                            <button className="btn btn-dark rounded border-light App-button our-button" 
                             onClick={()=> {
                                     var request ={
                                         assistance: this.state.tempAssistance
